@@ -2,44 +2,38 @@
   "stats": {
     "suites": 11,
     "tests": 27,
-    "passes": 6,
+    "passes": 9,
     "pending": 0,
-    "failures": 21,
-    "start": "2021-12-09T21:00:47.193Z",
-    "end": "2021-12-09T21:00:47.633Z",
-    "duration": 440
+    "failures": 18,
+    "start": "2021-12-09T23:23:35.559Z",
+    "end": "2021-12-09T23:23:35.972Z",
+    "duration": 413
   },
   "tests": [
     {
       "title": "calls alert with each element passed",
       "fullTitle": "index.js myEach calls alert with each element passed",
-      "duration": 6,
+      "duration": 2,
       "currentRetry": 0,
-      "err": {
-        "message": "expected { Spy, 1 call } to have been called 4 times but got 1",
-        "showDiff": true,
-        "actual": "1",
-        "expected": "4",
-        "stack": "AssertionError: expected { Spy, 1 call } to have been called 4 times but got 1\n    at Context.<anonymous> (test/indexTest.js:19:41)\n    at processImmediate (node:internal/timers:464:21)"
-      }
+      "err": {}
     },
     {
       "title": "calls alert properly on object values",
       "fullTitle": "index.js myEach calls alert properly on object values",
       "duration": 1,
       "currentRetry": 0,
-      "err": {
-        "message": "expected { Spy, 1 call } to have been called with [ 1 ]",
-        "showDiff": true,
-        "expected": [
-          1
-        ],
-        "stack": "AssertionError: expected { Spy, 1 call } to have been called with [ 1 ]\n    at /home/greg/Development/code/Phase1/phase-1-javascript-functional-library-project/test/indexTest.js:25:72\n    at Array.forEach (<anonymous>)\n    at Context.<anonymous> (test/indexTest.js:25:17)\n    at processImmediate (node:internal/timers:464:21)"
-      }
+      "err": {}
     },
     {
       "title": "returns the original collection",
       "fullTitle": "index.js myEach returns the original collection",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "successfully returns a correctly populated array",
+      "fullTitle": "index.js myMap successfully returns a correctly populated array",
       "duration": 1,
       "currentRetry": 0,
       "err": {
@@ -47,17 +41,7 @@
         "showDiff": true,
         "actual": "false",
         "expected": "true",
-        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/indexTest.js:30:37)\n    at processImmediate (node:internal/timers:464:21)"
-      }
-    },
-    {
-      "title": "successfully returns a correctly populated array",
-      "fullTitle": "index.js myMap successfully returns a correctly populated array",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: myMap is not defined\n    at Context.<anonymous> (test/indexTest.js:43:25)\n    at processImmediate (node:internal/timers:464:21)",
-        "message": "myMap is not defined"
+        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/indexTest.js:44:56)\n    at processImmediate (node:internal/timers:464:21)"
       }
     },
     {
@@ -70,11 +54,14 @@
     {
       "title": "successfully returns a correctly populated array from modified object values",
       "fullTitle": "index.js myMap successfully returns a correctly populated array from modified object values",
-      "duration": 0,
+      "duration": 2,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: myMap is not defined\n    at Context.<anonymous> (test/indexTest.js:54:25)\n    at processImmediate (node:internal/timers:464:21)",
-        "message": "myMap is not defined"
+        "message": "expected false to equal true",
+        "showDiff": true,
+        "actual": "false",
+        "expected": "true",
+        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/indexTest.js:55:56)\n    at processImmediate (node:internal/timers:464:21)"
       }
     },
     {
@@ -87,7 +74,7 @@
     {
       "title": "returns the correct reduced value when passed an initial value",
       "fullTitle": "index.js myReduce returns the correct reduced value when passed an initial value",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myReduce is not defined\n    at Context.<anonymous> (test/indexTest.js:69:29)\n    at processImmediate (node:internal/timers:464:21)",
@@ -161,7 +148,7 @@
     {
       "title": "correctly filters for values that the callback evaluates as true",
       "fullTitle": "index.js myFilter correctly filters for values that the callback evaluates as true",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myFilter is not defined\n    at Context.<anonymous> (test/indexTest.js:132:29)\n    at processImmediate (node:internal/timers:464:21)",
@@ -181,7 +168,7 @@
     {
       "title": "correctly returns the size of the collection when an array is passed",
       "fullTitle": "index.js mySize correctly returns the size of the collection when an array is passed",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: mySize is not defined\n    at Context.<anonymous> (test/indexTest.js:147:7)\n    at processImmediate (node:internal/timers:464:21)",
@@ -191,7 +178,7 @@
     {
       "title": "correctly returns the size of the collection (amount of keys) when an object is passed",
       "fullTitle": "index.js mySize correctly returns the size of the collection (amount of keys) when an object is passed",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: mySize is not defined\n    at Context.<anonymous> (test/indexTest.js:151:7)\n    at processImmediate (node:internal/timers:464:21)",
@@ -211,7 +198,7 @@
     {
       "title": "returns the first n elements of the collection when the second optional argument (n) is provided",
       "fullTitle": "index.js myFirst returns the first n elements of the collection when the second optional argument (n) is provided",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myFirst is not defined\n    at Context.<anonymous> (test/indexTest.js:163:14)\n    at processImmediate (node:internal/timers:464:21)",
@@ -221,7 +208,7 @@
     {
       "title": "returns the last element of the collection",
       "fullTitle": "index.js myLast returns the last element of the collection",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myLast is not defined\n    at Context.<anonymous> (test/indexTest.js:171:7)\n    at processImmediate (node:internal/timers:464:21)",
@@ -231,7 +218,7 @@
     {
       "title": "returns the last n elements of the collection when the second optional argument (n) is provided",
       "fullTitle": "index.js myLast returns the last n elements of the collection when the second optional argument (n) is provided",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myLast is not defined\n    at Context.<anonymous> (test/indexTest.js:175:14)\n    at processImmediate (node:internal/timers:464:21)",
@@ -268,7 +255,7 @@
     {
       "title": "does not modify the original object",
       "fullTitle": "index.js myValues does not modify the original object",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     }
@@ -276,35 +263,8 @@
   "pending": [],
   "failures": [
     {
-      "title": "calls alert with each element passed",
-      "fullTitle": "index.js myEach calls alert with each element passed",
-      "duration": 6,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected { Spy, 1 call } to have been called 4 times but got 1",
-        "showDiff": true,
-        "actual": "1",
-        "expected": "4",
-        "stack": "AssertionError: expected { Spy, 1 call } to have been called 4 times but got 1\n    at Context.<anonymous> (test/indexTest.js:19:41)\n    at processImmediate (node:internal/timers:464:21)"
-      }
-    },
-    {
-      "title": "calls alert properly on object values",
-      "fullTitle": "index.js myEach calls alert properly on object values",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected { Spy, 1 call } to have been called with [ 1 ]",
-        "showDiff": true,
-        "expected": [
-          1
-        ],
-        "stack": "AssertionError: expected { Spy, 1 call } to have been called with [ 1 ]\n    at /home/greg/Development/code/Phase1/phase-1-javascript-functional-library-project/test/indexTest.js:25:72\n    at Array.forEach (<anonymous>)\n    at Context.<anonymous> (test/indexTest.js:25:17)\n    at processImmediate (node:internal/timers:464:21)"
-      }
-    },
-    {
-      "title": "returns the original collection",
-      "fullTitle": "index.js myEach returns the original collection",
+      "title": "successfully returns a correctly populated array",
+      "fullTitle": "index.js myMap successfully returns a correctly populated array",
       "duration": 1,
       "currentRetry": 0,
       "err": {
@@ -312,33 +272,26 @@
         "showDiff": true,
         "actual": "false",
         "expected": "true",
-        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/indexTest.js:30:37)\n    at processImmediate (node:internal/timers:464:21)"
-      }
-    },
-    {
-      "title": "successfully returns a correctly populated array",
-      "fullTitle": "index.js myMap successfully returns a correctly populated array",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {
-        "stack": "ReferenceError: myMap is not defined\n    at Context.<anonymous> (test/indexTest.js:43:25)\n    at processImmediate (node:internal/timers:464:21)",
-        "message": "myMap is not defined"
+        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/indexTest.js:44:56)\n    at processImmediate (node:internal/timers:464:21)"
       }
     },
     {
       "title": "successfully returns a correctly populated array from modified object values",
       "fullTitle": "index.js myMap successfully returns a correctly populated array from modified object values",
-      "duration": 0,
+      "duration": 2,
       "currentRetry": 0,
       "err": {
-        "stack": "ReferenceError: myMap is not defined\n    at Context.<anonymous> (test/indexTest.js:54:25)\n    at processImmediate (node:internal/timers:464:21)",
-        "message": "myMap is not defined"
+        "message": "expected false to equal true",
+        "showDiff": true,
+        "actual": "false",
+        "expected": "true",
+        "stack": "AssertionError: expected false to equal true\n    at Context.<anonymous> (test/indexTest.js:55:56)\n    at processImmediate (node:internal/timers:464:21)"
       }
     },
     {
       "title": "returns the correct reduced value when passed an initial value",
       "fullTitle": "index.js myReduce returns the correct reduced value when passed an initial value",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myReduce is not defined\n    at Context.<anonymous> (test/indexTest.js:69:29)\n    at processImmediate (node:internal/timers:464:21)",
@@ -398,7 +351,7 @@
     {
       "title": "correctly filters for values that the callback evaluates as true",
       "fullTitle": "index.js myFilter correctly filters for values that the callback evaluates as true",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myFilter is not defined\n    at Context.<anonymous> (test/indexTest.js:132:29)\n    at processImmediate (node:internal/timers:464:21)",
@@ -418,7 +371,7 @@
     {
       "title": "correctly returns the size of the collection when an array is passed",
       "fullTitle": "index.js mySize correctly returns the size of the collection when an array is passed",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: mySize is not defined\n    at Context.<anonymous> (test/indexTest.js:147:7)\n    at processImmediate (node:internal/timers:464:21)",
@@ -428,7 +381,7 @@
     {
       "title": "correctly returns the size of the collection (amount of keys) when an object is passed",
       "fullTitle": "index.js mySize correctly returns the size of the collection (amount of keys) when an object is passed",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: mySize is not defined\n    at Context.<anonymous> (test/indexTest.js:151:7)\n    at processImmediate (node:internal/timers:464:21)",
@@ -448,7 +401,7 @@
     {
       "title": "returns the first n elements of the collection when the second optional argument (n) is provided",
       "fullTitle": "index.js myFirst returns the first n elements of the collection when the second optional argument (n) is provided",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myFirst is not defined\n    at Context.<anonymous> (test/indexTest.js:163:14)\n    at processImmediate (node:internal/timers:464:21)",
@@ -458,7 +411,7 @@
     {
       "title": "returns the last element of the collection",
       "fullTitle": "index.js myLast returns the last element of the collection",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myLast is not defined\n    at Context.<anonymous> (test/indexTest.js:171:7)\n    at processImmediate (node:internal/timers:464:21)",
@@ -468,7 +421,7 @@
     {
       "title": "returns the last n elements of the collection when the second optional argument (n) is provided",
       "fullTitle": "index.js myLast returns the last n elements of the collection when the second optional argument (n) is provided",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "ReferenceError: myLast is not defined\n    at Context.<anonymous> (test/indexTest.js:175:14)\n    at processImmediate (node:internal/timers:464:21)",
@@ -498,6 +451,27 @@
   ],
   "passes": [
     {
+      "title": "calls alert with each element passed",
+      "fullTitle": "index.js myEach calls alert with each element passed",
+      "duration": 2,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "calls alert properly on object values",
+      "fullTitle": "index.js myEach calls alert properly on object values",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns the original collection",
+      "fullTitle": "index.js myEach returns the original collection",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "does not modify the original array",
       "fullTitle": "index.js myMap does not modify the original array",
       "duration": 0,
@@ -535,7 +509,7 @@
     {
       "title": "does not modify the original object",
       "fullTitle": "index.js myValues does not modify the original object",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     }
