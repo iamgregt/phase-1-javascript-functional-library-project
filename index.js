@@ -33,11 +33,11 @@ function myMap(collection, callback){
 
 function myReduce(collection, callback, acc){
     let newCollection = Array.isArray(collection) ? collection : Object.values(collection)
-    for(let i = 0; i < newCollection.length ; i++){
-        let total = callback(newCollection[i])
-        // parseInt(total)
-        console.log(total)
-        
-        
+    let total = Number.isInteger(acc) ? acc : collection[0]
+    console.log(total)
+    for (let i = 0 ; i < newCollection.length ; i++){
+        let val = newCollection[i]
+        total += callback(total, val, newCollection)
     }
+    return total
 }
