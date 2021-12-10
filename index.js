@@ -22,13 +22,22 @@ function myEach(collection, callback){
 
 function myMap(collection, callback){
     let newCollection = Array.isArray(collection) ? collection : Object.values(collection)
+    let newArray = []
     for(let i = 0; i < newCollection.length ; i++){
-        let newArray = []
         newArray.push(callback(newCollection[i]))
         console.log(newArray)
-        return newArray
         
     }
-    return collection
+    return newArray
 }
 
+function myReduce(collection, callback, acc){
+    let newCollection = Array.isArray(collection) ? collection : Object.values(collection)
+    for(let i = 0; i < newCollection.length ; i++){
+        let total = callback(newCollection[i])
+        // parseInt(total)
+        console.log(total)
+        
+        
+    }
+}
