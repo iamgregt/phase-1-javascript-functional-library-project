@@ -33,11 +33,15 @@ function myMap(collection, callback){
 
 function myReduce(collection, callback, acc){
     let newCollection = Array.isArray(collection) ? collection : Object.values(collection)
-    let total = Number.isInteger(acc) ? acc : collection[0]
-    console.log(total)
-    for (let i = 0 ; i < newCollection.length ; i++){
-        let val = newCollection[i]
-        total += callback(total, val, newCollection)
+    if(!acc){ //if there is no acc
+        acc = collection[0] //our start value is the first number
+        newCollection = newCollection.slice((1)) //array starts at the next index index[1]
     }
-    return total
+ 
+    for (let i = 0 ; i < newCollection.length ; i++){ //if we have an acc i
+        let val = newCollection[i]
+        acc = callback(acc, val, newCollection)
+    }
+    return acc
 }
+
