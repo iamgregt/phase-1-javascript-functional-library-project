@@ -34,7 +34,7 @@ function myMap(collection, callback){
 function myReduce(collection, callback, acc){
     let newCollection = Array.isArray(collection) ? collection : Object.values(collection)
     if(!acc){ //if there is no acc
-        acc = collection[0] //our start value is the first number
+        acc = newCollection[0] //our start value is the first number
         newCollection = newCollection.slice((1)) //array starts at the next index index[1]
     }
  
@@ -42,6 +42,7 @@ function myReduce(collection, callback, acc){
         let val = newCollection[i]
         acc = callback(acc, val, newCollection)
     }
+    console.log(acc)
     return acc
 }
 
