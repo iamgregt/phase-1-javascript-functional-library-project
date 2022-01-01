@@ -46,3 +46,50 @@ function myReduce(collection, callback, acc){
     return acc
 }
 
+function myFind(collection, callback){
+    for(let accessor in collection) {
+        let element = collection[accessor]
+        if(callback(element)) {
+            return element
+        }
+    }
+}
+
+function myFilter(collection, callback){
+    let arr = []
+    for (let accessor in collection){
+         let element = collection[accessor]
+         if(callback(element)) {
+             arr.push(element)
+         }
+         
+    }
+    return arr
+}
+
+function mySize(collection){
+    let newCollection = Array.isArray(collection) ? collection : Object.values(collection)
+    return newCollection.length
+}
+
+function myFirst(array, n){
+    if(n){
+        return array.slice(0,n)
+    }else
+    return array[0]
+}
+
+function myLast(array, n){
+    if(n){
+        return array.slice(-n)
+    }else
+    return array[array.length - 1]
+}
+
+function myKeys(obj){
+    return Object.keys(obj)
+}
+
+function myValues(obj){
+    return Object.values(obj)
+}
